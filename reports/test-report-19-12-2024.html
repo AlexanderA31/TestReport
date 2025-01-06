@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Reporte de Pruebas Unitarias</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: "Arial", sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin: 2rem auto;
+                background-color: #f9f9f9;
+                color: #333;
+                max-width: 80%;
+                line-height: 1.6;
+            }
+
+            header {
+                text-align: center;
+                padding: 1.5rem 0;
+                background-color: #003366;
+                color: #fff;
+                margin-bottom: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+            header p {
+                margin: 0;
+                font-size: 1rem;
+                color: #e0e0e0;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 1rem 0;
+                color: #0056b3;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1.5rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4caf50;
+                content: '✓';
+                padding-right: 0.5rem;
+                font-weight: bold;
+            }
+
+            .defect {
+                color: #d32f2f;
+            }
+
+            .defect:before {
+                color: #d32f2f;
+                content: '✗';
+                padding-right: 0.5rem;
+                font-weight: bold;
+            }
+
+            table {
+                border-collapse: collapse;
+                margin-bottom: 2rem;
+                width: 100%;
+                background-color: #fff;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            th, td {
+                border: 1px solid #ddd;
+                padding: 0.8rem;
+                text-align: left;
+            }
+
+            th {
+                background-color: #003366;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 1rem;
+            }
+
+            td {
+                font-size: 0.9rem;
+            }
+
+            .info {
+                background-color: #e3f2fd;
+                padding: 1rem;
+                margin-bottom: 2rem;
+                border: 1px solid #90caf9;
+                border-radius: 8px;
+                font-size: 1rem;
+            }
+
+            .highlight {
+                font-weight: bold;
+                color: #003366;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 2rem;
+                padding: 1rem;
+                background-color: #003366;
+                color: #fff;
+                font-size: 0.9rem;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Reporte de Pruebas Unitarias</h1>
+           
+        </header>
+
+        <h2>Métricas de Pruebas</h2>
+        <table>
+            <tr>
+                <th>Métrica</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Total de pruebas</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Pruebas exitosas</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>Pruebas fallidas</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Tiempo de ejecución</td>
+                <td>0.235 segundos</td>
+            </tr>
+            <tr>
+                <td>Porcentaje de éxito</td>
+                <td>97.14%</td>
+            </tr>
+            <tr>
+                <td>Fecha y hora de ejecución</td>
+                <td>19/12/2024 14:35</td>
+            </tr>
+            <tr>
+                <td>Entorno de pruebas</td>
+                <td>Local</td>
+            </tr>
+            <tr>
+                <td>Versión de PHPUnit</td>
+                <td>11.4.4</td>
+            </tr>
+            <tr>
+                <td>Cobertura de código</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>Módulos probados</td>
+                <td>7</td>
+            </tr>
+        </table>
+
+        <div class="info">
+            <p><span class="highlight">Nota:</span> Este informe detalla los resultados obtenidos durante la última ejecución de las pruebas unitarias. Mantén el entorno actualizado para garantizar la validez de los resultados.</p>
+        </div>
+
+        <h2>Generador de Claves de Acceso</h2>
+        <ul>
+            <li class="success">Generar devuelve clave de acceso válida</li>
+            <li class="success">Generar maneja datos opcionales faltantes</li>
+            <li class="defect">Generar excepción en fecha no válida</li>
+        </ul>
+
+        <h2>Datos del Documento</h2>
+        <ul>
+            <li class="success">Preparar datos correctamente</li>
+        </ul>
+
+        <h2>Generador de Documentos</h2>
+        <ul>
+            <li class="success">Nueva factura genera XML correcto y clave de acceso</li>
+        </ul>
+
+        <h2>Servicio Firma XML (Tests\Unit\ServicioFirmaXml)</h2>
+        <ul>
+            <li class="success">Guardar comprobante firmado</li>
+            <li class="success">Guardar comprobante</li>
+            <li class="success">Guardar comprobante firma falla</li>
+            <li class="success">Obtener comprobante firmado</li>
+            <li class="success">Firmar comprobante exitoso</li>
+            <li class="success">Firmar comprobante falla</li>
+        </ul>
+
+        <h2>Sri Autorización (Tests\Unit\SriAutorizacion)</h2>
+        <ul>
+            <li class="success">Autorización de comprobante recibida</li>
+            <li class="success">Autorización de comprobante devuelta</li>
+            <li class="success">Autorización de comprobante no autorizado</li>
+            <li class="success">Autorización de comprobante sin estado</li>
+        </ul>
+
+        <h2>Envío de Pruebas Sri</h2>
+        <ul>
+            <li class="success">Enviar comprobante recepción éxito</li>
+            <li class="success">Enviar comprobante recepción error SOAP</li>
+            <li class="success">Enviar comprobante recepción XML inválido</li>
+            <li class="success">Enviar comprobante recepción ambiente producción</li>
+            <li class="success">Enviar comprobante autorización éxito</li>
+        </ul>
+
+        <h2>Generador de Bloques XML (Tests\Unit\XmlBlockGenerator)</h2>
+        <ul>
+            <li class="success">Agregar información tributaria</li>
+            <li class="success">Agregar totales con impuestos</li>
+            <li class="success">Agregar pagos</li>
+            <li class="success">Agregar detalles</li>
+            <li class="success">Agregar información adicional</li>
+            <li class="success">Agregar rubros de terceros</li>
+        </ul>
+
+        <h2>Validador de XML (Tests\Unit\XmlValidator)</h2>
+        <ul>
+            <li class="success">Validar factura correctamente</li>
+            <li class="success">Validar factura sin XSD</li>
+            <li class="success">Validar factura XML inválido</li>
+        </ul>
+
+        
+    </body>
+</html>
