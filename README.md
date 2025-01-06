@@ -40,4 +40,4 @@ Simulan dependencias externas, como servicios SOAP o interacciones con nodos XML
 
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu-usuario/nombre-repositorio.git
+   git clone https://github.com/AlexanderA31/TestReport.git
